@@ -19,7 +19,7 @@ public class SceneScript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Tab))
         {
-            SceneManager.LoadScene("TestScene");
+            SceneManager.LoadScene("RunningScene");
         }
     }
 }
