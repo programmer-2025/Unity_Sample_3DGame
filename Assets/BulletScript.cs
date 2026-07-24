@@ -14,4 +14,10 @@ public class BulletScript : MonoBehaviour
         const float speed = 1.0f;
         transform.position += speed * transform.forward * Time.deltaTime;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Hit");
+        Destroy(gameObject);
+    }
 }
