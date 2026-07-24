@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+
+    public GameObject bullet;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +25,11 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKey(KeyCode.S))
         {
             transform.position -= speed * transform.forward * Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(bullet, new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
 }
